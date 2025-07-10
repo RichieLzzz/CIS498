@@ -1,0 +1,81 @@
+/* ----------  Layout Basics  ---------- */
+html, body { height: 100%; margin: 0; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+/* ---------- Dashboard background image (replace if needed) ---------- */
+  background-image: url('img/BBDashboardbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ----------  Semi-transparent Main Wrapper  ---------- */
+.dashboard-wrapper {
+  flex: 1;                    /* Occupy all vertical space above bottom buttons */
+  margin: 20px;               /* Outer margin */
+  padding: 20px;
+  background: rgba(255,255,255,.85);  /* Frosted glass effect */
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
+
+/* ---------- 2×2 CSS Grid for the four info cards ---------- */
+.dashboard {
+  width: 100%;       /* Stretch to wrapper width */
+  height: 100%;      /* Match wrapper height */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows:    repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ---------- Single data card ---------- */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 12px;
+  background: var(--card-bg, #e2e2e2);
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+/* ----------  Bottom Action Buttons  ---------- */
+.action-buttons {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  position: fixed;           /* Stick to bottom out of normal flow */
+  bottom: 20px;              /* Same offset as wrapper margin */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 90;
+}
+.btn {
+  width: 320px;          
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;       /* Small round corners */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  transition: transform .2s;
+}
+.btn:hover      { transform: translateY(-3px); }
+.add-expense    { background: #ff8c42; color: #fff; }
+.voice-input    { background: #2a9d8f; color: #fff; }
+
+/* ----------  Top-right Switch-View Button  ---------- */
+.switch-view {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  z-index: 99;
+}

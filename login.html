@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BudgetBunny-Login</title>
+  <link rel="stylesheet" href="budgetbunny.css" />
+</head>
+<body class="view-day login-page"> <!-- The login-page class centers the card -->
+    <button id="switch-view" class="switch-btn">Switch View</button>
+  
+    <div class="card">
+        <img src="img/BBlogo.png" alt="BudgetBunny Logo" class="logo" />
+        <h1>Login</h1>
+
+        <form action="Dashboard.html" method="get">
+            <input id="email"    type="email"    placeholder="Email"    autocomplete="email" required />
+            <input id="password" type="password" placeholder="Password" autocomplete="current-password" required />
+          
+            <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+      
+        <button class="btn btn-secondary" onclick="location.href='BudgetBunny.html'">← Back</button>
+      </div>
+      
+  
+    <footer class="bb-footer">v0.0.3 · © 2025 BudgetBunny</footer>
+    <script src="darkmode.js" defer></script>
+  </body>
+</html>

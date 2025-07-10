@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>BudgetBunny Dashboard</title>
+
+<!-- ---------- Page-specific styles ---------- -->
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+<!-- ---------- Semi-transparent wrapper ---------- -->
+  <div class="dashboard-wrapper">
+
+<!-- ---------- Optional view-toggle button ---------- -->
+    <button class="switch-view" onclick="toggleView()">Switch View</button>
+
+<!-- ---------- Four info cards ---------- -->
+    <div class="dashboard">
+      <div class="card overview" data-card="summary">
+        <h2>Expense Overview</h2>
+        <p id="total-expense">$0.00</p>
+      </div>
+
+      <div class="card monthly-progress" data-card="progress">
+        <h2>Monthly Budget Progress</h2>
+        <progress id="month-progress" value="0" max="100"></progress>
+      </div>
+
+      <div class="card category-breakdown" data-card="categories">
+        <h2>Expense Categories</h2>
+        <ul id="category-list"></ul>
+      </div>
+
+      <div class="card tips" data-card="tips">
+        <h2>Tips</h2>
+        <p id="tip-content">Remember to stick to your budget!</p>
+      </div>
+    </div>
+
+<!-- ---------- Action buttons ---------- -->
+    <div class="action-buttons">
+      <button class="btn add-expense" onclick="openExpenseModal()">＋ Add Expense</button>
+      <button class="btn voice-input" onclick="startVoice()">＋ Voice Input</button>
+    </div>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
